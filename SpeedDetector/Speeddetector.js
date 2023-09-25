@@ -15,8 +15,7 @@ function licenceStatus(speed){
         else{
             console.log(demeritPoints)
         }
-    }
-}
+    }}
 
   
   module.exports={licenceStatus}

@@ -6,7 +6,7 @@ const rL=readLine.createInterface({
     input:process.stdin,
     output:process.stdout
 });
-rL.question('enter actualSpeed ',(speed)=>{
+rL.question('enter speed ',(speed)=>{
     speedl(speed)
     rL.close();
 })

@@ -1,15 +1,11 @@
-const readline = require('readline').createInterface({
+const readline=require('readline')
+const grading =require('./StudentGradeGenerator')
+const getGrade =grading.getGrade
+const rl = readline.createInterface({
     input: process.stdin,
-    output: process.stdout
+    output: process.stdout,
   });
-
-
-readline.question('Enter your marks: ', marks => {
-    if(isNaN(marks) || marks < 0 || marks > 100){
-        console.log("Enter a valid number between 0 and 100")
-    }
-    else{
-        console.log(getGrade(marks))
-    }
-    readline.close();
-  });
+rl.question('Enter marks: ',(marks)=>{
+    console.log(getGrade(marks));
+    rl.close()
+})
