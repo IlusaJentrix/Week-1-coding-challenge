@@ -6,6 +6,7 @@ function licenceStatus(speed){
     if (speed <= speedLimit) {
         console.log("Ok");
     } 
+    // demerit points calculations
     else {    
         const speedOver = (speed - speedLimit);
         const demeritPoints = Math.floor(speedOver / demeritPerKilometer);

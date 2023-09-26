@@ -17,9 +17,9 @@ function getGrade(marks){
             return "E";
         }
     } else 
-    
+
         return "Enter a valid number between 0 and 100"
     }
-
+//export the function to index.js
 
 module.exports={getGrade}
