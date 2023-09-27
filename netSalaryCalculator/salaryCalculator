@@ -14,6 +14,8 @@ function calculatenetSalary(basicSalary, benefits) {
     `
 }
 //calculatePAYE
+//we calculate PAYE by checking the gross salary and the amount to be taxed depending on the tax bracket that the  gross salary falls into
+// the tax pax bracket can be found on the current tax according to KRA
 function PAYE(grossSalary) {
     if (grossSalary <= 24000) {
         return (24000 * 0.1)
@@ -38,12 +40,14 @@ function PAYE(grossSalary) {
 
 
 // calculate NSSFdeductions
-// NSSF = Tier I and Tier II
+// NSSF = Tier I and Tier II]
+//
 function NSSFdeductions() {
     const NSSF = (0.06 * 6000) + (0.06 * 18000)
     return NSSF;
 }
 //   calculate NHIFdeductions
+//NHIF deductions are standard  depending the barcket thet the gross salary falls into.
 function NHIFdeductions(grossSalary) {
     if (grossSalary <= 5999)
         return 150;
@@ -117,5 +121,5 @@ function NHIFdeductions(grossSalary) {
 
 
 
-
+//export the function to index.js
 module.exports = {calculatenetSalary}

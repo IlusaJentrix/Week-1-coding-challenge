@@ -1,4 +1,5 @@
-
+//this function checks the marks entered and assigns the marks the correct grade
+// note that the marks entered is anything between 0and 100
 function getGrade(marks){
     if (marks > 0 && marks <= 100) {
         if (marks > 79) {

@@ -1,5 +1,4 @@
-
-const speedLimit=70
+//checks the speed 
 const demeritPerKilometer=5
 
 function licenceStatus(speed){
@@ -7,6 +6,7 @@ function licenceStatus(speed){
         console.log("Ok");
     } 
     // demerit points calculations
+    //here we calculate the demerit points from the exceeeded speed divided by the demerit per kilometer.
     else {    
         const speedOver = (speed - speedLimit);
         const demeritPoints = Math.floor(speedOver / demeritPerKilometer);
@@ -18,5 +18,5 @@ function licenceStatus(speed){
         }
     }}
 
-  
+  //export thefunction to index.js
   module.exports={licenceStatus}
